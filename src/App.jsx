@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import About from "./Components/About";
+import Banner from "./Components/Banner";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
+import Nav from "./Components/Nav";
+import Projects from "./Components/Projects";
+import Serivces from "./Components/Services";
+import { BallTriangle } from "react-loader-spinner";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000)
+  }, [])
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      {
+        loading ?
+          <div className="bg-slate-900 h-[100vh] flex justify-center items-center">
+            <BallTriangle
+              height={100}
+              width={100}
+              radius={5}
+              color="#d946ef"
+              ariaLabel="ball-triangle-loading"
+              wrapperClass={{}}
+              wrapperStyle=""
+              visible={true}
+            />
+          </div>
+          :
 
-export default App
+          <div className="bg-slate-900">
+            <Nav />
+            <Banner />
+            <About />
+            <Serivces />
+            <Projects />
+            <Contact />
+            <Footer />
+          </div>
+      }
+    </>
+  );
+};
+
+export default App;

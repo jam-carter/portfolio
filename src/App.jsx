@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import About from "./Components/About";
-import Banner from "./Components/Banner";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Nav from "./Components/Nav";
+import Introduction from "./Components/Introduction";
 import Projects from "./Components/Projects";
-import Serivces from "./Components/Services";
 import { BallTriangle } from "react-loader-spinner";
 
 const App = () => {
@@ -25,7 +24,7 @@ const App = () => {
               height={100}
               width={100}
               radius={5}
-              color="#d946ef"
+              color="#3b82f6"
               ariaLabel="ball-triangle-loading"
               wrapperClass={{}}
               wrapperStyle=""
@@ -36,9 +35,8 @@ const App = () => {
 
           <div className="bg-slate-900">
             <Nav />
-            <Banner />
+            <Introduction />
             <About />
-            <Serivces />
             <Projects />
             <Contact />
             <Footer />

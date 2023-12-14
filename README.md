@@ -8,4 +8,4 @@ This project does the following:
 - The ability to contact me directly via the message box
 - View my social accounts (Instagram, LinkedIn, Twitter)
 
-Live Link:
+Live Link: https://jam-carter.github.io/portfolio/

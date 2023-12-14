@@ -1,6 +1,11 @@
-# React + Vite
+#Personal Website Portfolio 
 
 A personal website built to showcase my frontend and backend skills.
-This project highlights my skills, provides a small introduction, allows a PDF of my resume to be viewed in browser, and showcases some of my projects
+This project does the following:
+- Provides a small introduction to myself
+- Allows my resume to be viewed in browser
+- Showcases three of my personal projects
+- The ability to contact me directly via the message box
+- View my social accounts (Instagram, LinkedIn, Twitter)
 
 Live Link:
